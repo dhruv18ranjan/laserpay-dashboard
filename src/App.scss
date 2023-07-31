@@ -1,0 +1,17 @@
+.app{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #F8F8F8;
+    background-image: url("https://distributed.s3.amazonaws.com/static/assets/bggrid.png");
+    background-repeat: repeat;
+
+    .routes{
+        height: max-content;
+    }
+ 
+}
+
+
+

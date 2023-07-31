@@ -1,0 +1,23 @@
+.menu{
+    display: flex;
+    width: 69.7vw;
+    background-color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+    margin-top: 30px;
+
+    .menuItems{
+        font-size: 12px;
+        display: flex;
+        font-weight: 400px;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 30px;
+        color: #333333;
+        cursor: pointer;
+        
+    }
+
+}
