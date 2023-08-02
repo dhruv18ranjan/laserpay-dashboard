@@ -1,0 +1,17 @@
+.billingsDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 71vw;
+
+    .billings{
+        background: #FFFFFF;
+        padding: 0 0px;
+        border-radius: 12px;
+        font-size: 13px;
+        width: 100%;
+        box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+        height: 300px;
+    }
+
+}

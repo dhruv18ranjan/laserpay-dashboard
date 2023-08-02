@@ -2,13 +2,14 @@ import React from 'react'
 import "./insights.scss"
 import Navbar from '../../components/navbar/Navbar'
 import Menu from '../../components/menu/Menu'
+import { insights } from '../../MenuData'
 
 const Insights = () => {
   return (
-    <div className='container'>
+    <div className='insightsDiv'>
       <Navbar />
-      <Menu />
-        <div className='infoGrid'>
+      <Menu data={insights} />
+        <div className='insights'>
 
         </div>
     </div>

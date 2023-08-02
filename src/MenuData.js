@@ -1,0 +1,5 @@
+export const dashboard=["Home","Credentials Groups", "Designs","Unpublished","Reviews"]
+export const credentials=["Directories","Unpublished","Suspended","Expired","Revoked"]
+export const insights=["Insights"]
+export const integrations=["Marketplace"]
+export const billings=["Billings & Usage","Payment Method","Usage","Invoices", "Coupon", "Billing Contact"]

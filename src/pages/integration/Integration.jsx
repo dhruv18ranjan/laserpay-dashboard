@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Menu from '../../components/menu/Menu'
 import "./integration.scss"
+import { integrations } from '../../MenuData'
 
 const Integration = () => {
 
@@ -84,7 +85,7 @@ const Integration = () => {
   return (
     <div className='integrationContainer'>
       <Navbar />
-      <Menu />
+      <Menu data={integrations} />
 
       <div className='infoGrids'>
 

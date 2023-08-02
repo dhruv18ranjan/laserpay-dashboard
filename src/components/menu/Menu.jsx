@@ -1,24 +1,18 @@
 import React from 'react'
 import "./menu.scss"
+import { Link } from 'react-router-dom'
 
-const Menu = () => {
+const Menu = ({ data }) => {
     return (
         <div className='menu'>
-                <div className='menuItems'>
-                    <span>Home</span>
+            {data?.map((dataItem, index) => (
+                <div className='menuItems' key={index}>
+                    <Link to="/random">
+                        <span>{dataItem}</span>
+                    </Link>
                 </div>
-                <div className='menuItems'>
-                    <span>Credentials Groups</span>
-                </div>
-                <div className='menuItems'>
-                    <span>Designs</span>
-                </div>
-                <div className='menuItems'>
-                    <span>Unpublished</span>
-                </div>
-                <div className='menuItems'>
-                    <span>Reviews</span>
-                </div>
+            ))}
+
         </div>
     )
 }

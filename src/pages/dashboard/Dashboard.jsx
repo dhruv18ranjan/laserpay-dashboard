@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faBarsProgress, faGear, faFile, faRandom, faArrowRightToBracket, faUpload, faMailBulk, faMailForward, faMailReply, faMessage, faEnvelope, faArrowRight, faCheck } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../../components/navbar/Navbar'
 import Menu from '../../components/menu/Menu'
+import { dashboard } from '../../MenuData'
 
 const Dashboard = () => {
 
     return (
         <div className='container'>
             <Navbar />
-            <Menu />
+            <Menu data={dashboard} />
 
             <div className='infoGrid'>
                 <div className='infoContainer'>
