@@ -11,7 +11,7 @@ import Settings from './pages/settings/Settings';
 import Sidebar from './components/sidebar/Sidebar';
 import Dashboard from './pages/dashboard/Dashboard';
 import Integration from './pages/integration/Integration';
-import Insights from './pages/Insights/Insights';
+import Insights from './pages/insights/Insights';
 import Billings from './pages/billings/Billings';
 import Credentials from './pages/credentials/Credentials';
 
