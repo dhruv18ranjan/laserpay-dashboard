@@ -1,0 +1,82 @@
+.integrationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 71vw;
+
+    .infoGrids {
+        background: #FFFFFF;
+        margin-top: 25px;
+        padding: 0 0px;
+        border-radius: 12px;
+        font-size: 13px;
+        display: table;
+        width: 100%;
+        box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+        height: 300px;
+
+        .infoContainer {
+            margin: 30px;
+
+            .integrationHead {
+                font-size: 15px;
+                line-height: 1.7;
+                color: #121212;
+                font-weight: bolder;
+            }
+
+            .integrationp {
+                font-size: 12px;
+                color: #444444;
+                line-height: 20px;
+            }
+
+            .integrationList {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 25px;
+                margin-top: 20px;
+
+                .integration {
+                    cursor: pointer;
+                    min-width: 300px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .integrationHeading {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        gap: 15px;
+
+                        div .brand {
+                            font-size: 12px;
+                            color: black;
+                            line-height: 1.7;
+                            font-weight: 900;
+                            margin: 0;
+                        }
+
+                        div .brandwork {
+                            font-size: 12px;
+                            color: #444444;
+                            line-height: 20px;
+                            margin: 0;
+                        }
+
+                    }
+                    .brandpara{
+                        font-size: 12px;
+                        color: #444444;
+                        line-height: 20px;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

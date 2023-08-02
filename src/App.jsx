@@ -8,12 +8,12 @@ import {
 } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Settings from './pages/settings/Settings';
-import Template from './pages/template/Template';
-import Random from './pages/random/Random';
 import Sidebar from './components/sidebar/Sidebar';
-import Navbar from './components/navbar/Navbar';
-import Menu from './components/menu/Menu';
 import Dashboard from './pages/dashboard/Dashboard';
+import Integration from './pages/integration/Integration';
+import Insights from './pages/Insights/Insights';
+import Billings from './pages/billings/Billings';
+import Credentials from './pages/credentials/Credentials';
 
 
 function App() {
@@ -25,10 +25,11 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/dashboard' element={<Dashboard />} />
+          <Route exact path='/credentials' element={<Credentials />} />
           <Route exact path='/settings' element={<Settings />} />
-          <Route exact path='/template' element={<Template />} />
-          <Route exact path='/random' element={<Random />} />
-          <Route exact path='/random' element={<Random />} />
+          <Route exact path='/integrations' element={<Integration />} />
+          <Route exact path='/insights' element={<Insights />} />
+          <Route exact path='/billings' element={<Billings />} />
         </Routes>
         </div>
       </div>
