@@ -7,7 +7,7 @@ const Menu = ({ data }) => {
         <div className='menu'>
             {data?.map((dataItem, index) => (
                 <div className='menuItems' key={index}>
-                    <Link to="/random">
+                    <Link to="">
                         <span>{dataItem}</span>
                     </Link>
                 </div>

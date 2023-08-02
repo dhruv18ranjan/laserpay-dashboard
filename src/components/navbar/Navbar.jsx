@@ -1,4 +1,5 @@
 import React from 'react'
+import profile from "../../assets/profile.png"
 import logo from "../../assets/Laserpay_logo.png"
 import "./navbar.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,7 +14,7 @@ const Navbar = () => {
         </div>
         <div className='profileDiv'>
             <FontAwesomeIcon icon={faBell} className='bell' />
-            <img className='profileImg' src={logo} alt="" />
+            <img className='profileImg' src={profile} alt="" />
         </div>
     </div>
   )

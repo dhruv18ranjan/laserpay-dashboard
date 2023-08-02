@@ -3,3 +3,4 @@ export const credentials=["Directories","Unpublished","Suspended","Expired","Rev
 export const insights=["Insights"]
 export const integrations=["Marketplace"]
 export const billings=["Billings & Usage","Payment Method","Usage","Invoices", "Coupon", "Billing Contact"]
+export const settings=["General","Team Member","Email Templates","Social Media", "Api Access", "Beta","Email Delivery"]
