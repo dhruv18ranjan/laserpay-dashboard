@@ -53,7 +53,8 @@ const Dashboard = () => {
                                 <td>
                                 <div className='tdDiv'>
                                     <img src="https://distributed.s3.amazonaws.com/static/assets/flat_puzzle.png" alt="" />
-                                    API Access <br /> & Documention </div>   
+                                   <p> API Access <br /> & Documention  </p>
+                                    </div>   
                                 </td>
                                 <td>
                                 <div className='tdDiv'>
