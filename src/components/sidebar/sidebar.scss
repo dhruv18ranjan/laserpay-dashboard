@@ -15,11 +15,43 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .dropdown{
+           
+            div{
+                position: absolute;
+                left: 150px;
+                display: block;
+                background-color: white;
+                padding: 0;
+                margin: 0;                
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 9px 0px;
+
+                ul{
+                    list-style: none;
+                    margin-right: 20px;
+                    font-size: 13px;
+
+                    li{
+                        color: rgb(66, 66, 66);
+                        font-weight: 200;
+                        cursor: pointer;
+                        margin-top: 15px;
+                    }
+                }
+
+            }
+        }
         .headingDiv{
             width: 60%;
-            margin-left: 40px;
+            margin-right: 40px;
             h3{
                 font-weight: 500;
+                margin: 0;
+                margin-top: 20px;
             }
             p{
                 font-size: 11px;
@@ -36,16 +68,7 @@
         align-items: center;
         margin-top: 10px;
 
-        input{
-            outline: none;
-            height: 25px;
-            border: none;
-            border-radius: 10px;
-            padding: 8px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 9px 0px;
-            margin-right: 20px;
-            margin-bottom: 10px;
-        }
+      
         .menuItemDiv {
             width: 70%;
             height: 40px;
