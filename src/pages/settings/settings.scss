@@ -1,18 +1,126 @@
-.settingsDiv{
+.settingsMain {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 71vw;
+
+    .settingsDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 71vw;
 
 
-    .settings{
-        background: #FFFFFF;
-        padding: 0 0px;
-        border-radius: 12px;
-        font-size: 13px;
-        display: table;
-        width: 100%;
-        box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
-        height: 300px;
+        .settings {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 13px;
+            display: table;
+            width: 96.5%;
+            box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+            height: 300px;
+
+
+
+            .settingsType {
+                margin: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: 12px;
+                cursor: pointer;
+
+
+                .settingsTypeAction {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+
+                    button {
+                        background-color: white;
+                        cursor: pointer;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        border: 0.5px solid black;
+                        font-size: 10px;
+                        border-radius: 2px;
+                        width: 50px;
+                    }
+
+
+                }
+
+               
+
+                .settingsTypeActionActive {
+                    margin-bottom: 20px;
+                }
+
+                .settingsInput {
+                    display: none;
+                    animation: slideUp 0.5s ease-in-out;
+
+                    button {
+                        cursor: pointer;
+                        outline: 0;
+                        border: 0;
+                        text-align: center;
+                        font-family: 'Poppins', sans-serif;
+                        padding: 10px 16px;
+                        color: #FFFFFF;
+                        font-size: 12px;
+                        background: #5CD865;
+                        border-radius: 7px !important;
+                        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1) !important;
+                        margin-left: 50px;
+                        height: 50px;
+                    }
+
+                    textarea {
+                        height: 70px;
+                        width: 350px;
+                        outline: none;
+                        border: 2px solid rgb(68, 134, 233);
+
+                        &::placeholder {
+                            padding: 10px;
+                        }
+
+                        font-family: 'Poppins',
+                        sans-serif;
+                    }
+
+                    input {
+                        height: 35px;
+                        width: 250px;
+                        outline: none;
+                        border: 2px solid rgb(68, 134, 233);
+                        font-family: 'Poppins', sans-serif;
+
+                    }
+                }
+                .transition-content {
+                    display: none;
+                }
+
+                .active {
+                    display: flex;
+                    animation: slideDown 0.5s ease-in-out;
+                }
+
+            }
+
+
+        }
     }
 }
+
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

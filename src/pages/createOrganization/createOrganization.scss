@@ -1,9 +1,8 @@
-.home {
+.create{
     width: 100vw;
     display: flex;
     justify-content: center;
-    
-    .container {
+    .container{
         margin: 80px;
         width: 1000px;
         display: inline-table;
@@ -29,7 +28,6 @@
                 }
 
             }
-
             .buttons-div{
                 display: flex;
                 justify-content: center;
@@ -49,6 +47,7 @@
                     cursor: pointer;
                 }
             }
+        
         }
 
         .second-section {
@@ -58,62 +57,46 @@
                 width: 100%;
                 margin: 20px;
 
-                .org-head{
-                    font-size: 12px;
-                    color: rgb(94, 94, 94);
-                    font-weight: bolder;
-                }
+                .input-container{
+                    label{
+                        font-size: 11px;
+                        color: gray;
 
-                .all-orgs {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    margin-bottom: 10px;
-                    margin-top: 25px;
-                    .org {
-                        width: 150px;
-                        height: 150px;
-                        display: flex;
-                        flex-direction: column;
-                        background-color: white;
+                    }
+                    input{
+                        height: 28px;
+                        width: 350px;
+                        margin-top: 10px;
+                        outline: none;
+                        border: none;
                         box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
-                        font-size: 13px;
-                        border-radius: 10px;
-                        cursor: pointer;
 
-                        .globe {
-                            flex: 3;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-
-                            .globe-icon {
-                                height: 50px;
-                                width: 50px;
-                                color: gray;
-                            }
-                        }
-
-                        .org-name {
-                            flex: 1;
-                            display: flex;
-                            justify-content: center;
-                            margin-top: 5px;
-                            margin-bottom: 5px;
-                        }
                     }
                 }
+                
+                .button{
+                    color:white;
+                    background-color: rgb(22, 198, 72);
+                    border: none;
+                    border-radius: 10px;
+                    padding: 12px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: green;
+                        transition: ease-in-out 0.2s;
 
-                .basic-footer{
-                    font-size: 11px;
-                    margin-top: 50px;
-                    color: gray;
+                    }
                 }
 
             }
 
+            .basic-footer{
+                font-size: 11px;
+                margin-top: 50px;
+                color: gray;
+            }
         }
 
     }
-
 }

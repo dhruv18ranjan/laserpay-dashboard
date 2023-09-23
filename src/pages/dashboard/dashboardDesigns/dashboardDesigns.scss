@@ -1,0 +1,69 @@
+.dashboardDesignsMain {
+    display: flex;
+
+    .dashboardDesigns {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 71vw;
+
+        .dashboardDesignsGrid {
+            background: #FFFFFF;
+            padding: 0 0px;
+            border-radius: 12px;
+            font-size: 13px;
+            display: table;
+            width: 100%;
+            box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+            height: 300px;
+
+            .dashboardDesignsContainer {
+                margin: 50px;
+                display: flex;
+                gap: 20px;
+
+                .DesignDiv {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid rgb(236, 236, 236);
+                    height: 200px;
+                    width: 180px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    color: rgb(87, 87, 87);
+                    flex-direction: column;
+                    box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+
+                    
+                    .designContainer{
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgb(188, 188, 188);
+                        color: white;
+                        border-radius: 10px;
+                        font-size: 17px;
+                        font-weight: bold;
+                    }
+
+
+                    .editDiv{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        font-size: 11px;
+                        margin-top: 10px;
+                        font-weight: bolder;
+                        height: 30px;
+                    }
+
+                }
+
+            }
+        }
+    }
+}

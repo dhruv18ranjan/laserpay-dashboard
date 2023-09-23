@@ -1,18 +1,48 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./sidebar.scss"
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGear, faPuzzlePiece, faCircleDollarToSlot, faChartLine, faFolder, faServer, faArrowDown, faArrowDown19, faArrowsUpDown, faArrowTurnDown, faCaretDown, faHouse, faPlus, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { faGear, faPuzzlePiece, faCircleDollarToSlot, faChartLine, faFolder, faServer, faArrowDown, faArrowDown19, faArrowsUpDown, faArrowTurnDown, faCaretDown, faHouse, faPlus, faRightFromBracket, faEarth } from '@fortawesome/free-solid-svg-icons'
+import { useDispatch, useSelector } from 'react-redux'
+import { emptyOrganisations, setOrganizations } from '../../redux/organizationSlice'
+import { logout } from '../../redux/userSlice'
 
 
 
-const Sidebar = () => {
+const Sidebar = ({id}) => {
 
   const [dropdown, setDropdown] = useState(false);
   const handleDropdown = () => {
     setDropdown(!dropdown);
   }
+  const navigate=useNavigate();
+
   
+
+  // const dispatch=useDispatch();
+
+  // const fetchData = async() => {
+  //   const response = await fetch('https://api1-7f7y.onrender.com/organizations');
+  //   const data = await response.json();
+  //   return data;
+  // }
+  
+  // useEffect(()=>{
+  //   fetchData().then((data)=>{
+  //     dispatch(setOrganizations(data));
+  //   })
+    
+  // },[])
+ 
+  const organisationData=useSelector((state)=>state.organizations.organizations);
+  const userData=useSelector((state)=>state.user.currentUser);
+  const dispatch=useDispatch();
+  
+  const handleLogout=()=>{
+      dispatch(logout);
+      dispatch(emptyOrganisations);
+      navigate('/login')
+  }
 
   return (
     <div className="sidebar">
@@ -20,7 +50,7 @@ const Sidebar = () => {
       <div className='heading'>
         <div className='headingDiv'>
           <h3>Dhruv</h3>
-          <p>@dhruv18ranjan</p>
+          <p>{userData?.email}</p>
         </div>
         <div className='dropdown'>
           <FontAwesomeIcon icon={faCaretDown} onClick={handleDropdown} />
@@ -28,9 +58,12 @@ const Sidebar = () => {
           {dropdown && (
             <div>
               <ul className="dropdown-menu">
-                <li> <FontAwesomeIcon style={{color:"gray "}} icon={faHouse} /> &nbsp; &nbsp; Home</li>
+                <li onClick={()=>navigate("/")}> <FontAwesomeIcon style={{color:"gray "}} icon={faHouse} /> &nbsp; &nbsp; Home</li>
+                {organisationData.map((orgs,index)=>(
+                   <li key={index}> <FontAwesomeIcon icon={faEarth} style={{color:"gray"}} />&nbsp; &nbsp; &nbsp; {orgs.name} </li>  
+                ))}
                 <li> <FontAwesomeIcon style={{color:"gray"}} icon={faPlus} /> &nbsp; &nbsp; create organisation</li>
-                <li> <FontAwesomeIcon style={{color:"gray"}} icon={faRightFromBracket} /> &nbsp; &nbsp; logout</li>
+                <li onClick={handleLogout}> <FontAwesomeIcon style={{color:"gray"}} icon={faRightFromBracket} /> &nbsp; &nbsp; logout</li>
               </ul>
             </div>
           )
@@ -54,7 +87,7 @@ const Sidebar = () => {
 
         <div className='menuItemDiv'>
           <p>
-            <Link to="/dashboard">
+            <Link to={`/${id}/dashboard`}>
               <FontAwesomeIcon icon={faServer} className='icon' /> &nbsp; &nbsp; Dashboard</Link>
           </p>
         </div>
@@ -70,14 +103,14 @@ const Sidebar = () => {
         <div className='menuItemDiv'>
 
           <p>
-            <Link to="/insights"> <FontAwesomeIcon icon={faChartLine} className='icon' /> &nbsp; &nbsp;Analytics & Insights</Link>
+            <Link to="/insights"> <FontAwesomeIcon icon={faChartLine} className='icon' /> &nbsp; &nbsp;Analytics <sup>BETA</sup> </Link>
           </p>
         </div>
 
         <div className='menuItemDiv'>
 
           <p>
-            <Link to="/integrations"> <FontAwesomeIcon icon={faPuzzlePiece} className='icon' /> &nbsp; &nbsp; Integrations</Link>
+            <Link to="/integrations"> <FontAwesomeIcon icon={faPuzzlePiece} className='icon' /> &nbsp; &nbsp; Integrations <sup>BETA</sup></Link>
           </p>
         </div>
 

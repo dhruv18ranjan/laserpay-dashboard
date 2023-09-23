@@ -1,4 +1,4 @@
-export const dashboard=["Home","Credentials Groups", "Designs","Unpublished","Reviews"]
+export const dashboard=["Home","Events", "Designs"]
 export const credentials=["Directories","Unpublished","Suspended","Expired","Revoked"]
 export const insights=["Insights"]
 export const integrations=["Marketplace"]

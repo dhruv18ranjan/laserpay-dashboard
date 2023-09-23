@@ -1,16 +1,88 @@
-.insightsDiv{
+.insightsMain{
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 71vw;
-
-    .insights {
-        background: #FFFFFF;
-        padding: 0 0px;
-        border-radius: 12px;
-        font-size: 13px;
-        width: 100%;
-        box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
-        height: 300px;
+    .insightsDiv{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 71vw;
+        
+        .visitorsData {
+            background: #FFFFFF;
+            padding: 0 0px;
+            border-radius: 12px;
+            font-size: 11px;
+            width: 100%;
+            box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+            height: 300px;
+            display: flex;
+            .totalVisitors{
+                flex: 1;
+                margin: 25px;
+            }
+            .trafficSources{
+                flex: 1;
+                margin: 30px;
+            }
+        }
+        .trafficData{
+            background: #FFFFFF;
+            box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+            height: 100px;
+            width: calc(100% - 50px);
+            border-radius: 12px;
+            font-size: 11px;
+            display: flex;
+            padding: 25px;
+            .socialTraffic{
+                flex: 1;
+                margin-left: 25px;
+                border-right:1px solid rgb(228, 228, 228) ;
+                &:nth-child(4){
+                    border: none;
+                }
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .dataDiv{
+                    display: flex;
+                   div{
+                    flex: 1;
+                        p{
+                            font-size: 30px;
+                            color: rgb(159, 159, 159);
+                            margin:0;
+                        }
+                   }
+                }
+            }
+        }
+        .engagementData{
+            background: #FFFFFF;
+            box-shadow: 0 2.5px 5.5px 0 rgba(0, 0, 0, .10);
+            height: 100px;
+            width: calc(100% - 20px);
+            font-size: 11px;
+            border-radius: 12px;
+            display: flex;
+            padding: 10px;
+            .engagementDiv{
+                flex: 1;
+                margin-left: 25px;
+                display: flex;
+                align-items: center;
+                border-right:1px solid rgb(228, 228, 228) ;
+                &:nth-child(4){
+                    border: none;
+                }
+                span{
+                    &:first-child{
+                        margin-left: 20px;
+                        margin-right: 30px;
+                        font-size: 35px;
+                        color: rgb(159, 159, 159);
+                    }
+                }
+            }
+        }
     }
 }

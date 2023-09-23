@@ -1,0 +1,87 @@
+import React, { useState } from 'react'
+import axios from 'axios';
+import signupImg from "../../assets/signupImg.png"
+import Laserpay_logo from "../../assets/Laserpay_logo.png"
+import { Link, useNavigate } from 'react-router-dom';
+import "./signup.scss"
+
+const Signup = () => {
+  const [username, setUsername] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    if (id === "username") {
+      setUsername(value);
+    }
+    if (id === "password") {
+      setPassword(value);
+    }
+    if (id === "email") {
+      setEmail(value);
+    }
+  }
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    let obj = {
+      username: username,
+      email: email,
+      password: password
+    }
+    console.log(obj)
+    try {
+      const res = await axios.post("https://api1-7f7y.onrender.com/auth/signup", obj)
+      navigate('/login')
+    }
+    catch (err) {
+      return err;
+      console.log(err);
+    }
+
+  }
+
+  return (
+    <div className='signup'>
+      <div className='img-container'>
+        <img src={signupImg} alt="" />
+      </div>
+
+      <div className='signup-container'>
+        <div className='signup-box'>
+          <div className='signup-info'>
+            <div className='logo-box'>
+              <img src={Laserpay_logo} height="30px" width="30px" alt="" />
+              <h1>Laserpay <sup>TM</sup></h1>
+            </div>
+
+            <div className='info-box'>
+              <p>Enter Your Username</p>
+              <input type="text" id='username' placeholder="  eg: John_Doe" onChange={handleChange} />
+              <br />  <br /> 
+              <p>Enter Your Email</p>
+              <input type="email" placeholder='  eg: johndoe@gmail.com' id='email' onChange={handleChange} /> <br /> <br />
+              <p>Enter Your Password</p> 
+              <input type="password" placeholder='  password' id="password" onChange={handleChange} /> <br />
+              <p className='p-info'>By creating an account, I agree to Hyperstack's Privacy Policy and Terms and Conditions</p>
+            </div>
+
+            <div className='button-box'>
+              <button onClick={handleClick}>Create Account</button>
+              <div style={{ display: "flex",justifyContent:"center",alignItems:"center",gap:"5px" }}>
+
+              <span>New to Laserpay ? </span><Link to="/login"> <span className='create'>create your account</span> </Link>
+</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+export default Signup
